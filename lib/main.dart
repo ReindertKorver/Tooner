@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   _launchURL() async {
     const url =
-        'https://api.toon.eu/authorize?response_type=code&redirect_uri=(redirect_url)&client_id=m8QLpABwUoADA5QddvWgX58IQIgxwgUy&tenant_id=eneco';
+        'https://api.toon.eu/authorize?response_type=code&redirect_uri=(redirect_url)&client_id={clientid}&tenant_id=eneco';
     if (await canLaunch(url)) {
       var result = await launch(
         url,
